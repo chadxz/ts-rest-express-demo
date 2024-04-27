@@ -1,0 +1,30 @@
+{
+  "name": "trpc-demo",
+  "type": "module",
+  "packageManager": "yarn@4.1.1",
+  "scripts": {
+    "backend": "tsx --no-warnings=ExperimentalWarning --watch backend/server.ts",
+    "frontend": "vite"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "zod": "^3.23.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2",
+    "@types/express": "^4.17.21",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react-swc": "^3.6.0",
+    "tsx": "^4.7.3",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10"
+  },
+  "imports": {
+    "#backend/*": "./backend/*",
+    "#frontend/*": "./frontend/*"
+  }
+}
