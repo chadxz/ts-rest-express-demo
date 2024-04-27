@@ -1,5 +1,7 @@
 # ts-rest-express-demo
 
+https://ts-rest.com/
+
 ## setup
 
 * `brew install proto`
