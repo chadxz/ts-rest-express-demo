@@ -11,6 +11,7 @@ const ErrorSchema = z.object({
 const UserSchema = z.object({
   id: z.number().gt(0).openapi({
     description: "The id of the user",
+    example: 1
   }),
   name: z.string().openapi({
     description: "The name of the user",

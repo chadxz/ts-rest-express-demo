@@ -5,6 +5,18 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@anatine/zod-openapi@npm:^1.12.0":
+  version: 1.14.2
+  resolution: "@anatine/zod-openapi@npm:1.14.2"
+  dependencies:
+    ts-deepmerge: "npm:^6.0.3"
+  peerDependencies:
+    openapi3-ts: ^2.0.0 || ^3.0.0
+    zod: ^3.20.0
+  checksum: 10c0/fbcd26be3528cb884c78fc3a60443ee2c59fd9a21adf93065ba68a653433a339f6200f8ea5453371a95d7cef4150ecbe7d581c45b0ff5bfb45b9d4a7c82c4dff
+  languageName: node
+  linkType: hard
+
 "@anatine/zod-openapi@npm:^2.2.5":
   version: 2.2.5
   resolution: "@anatine/zod-openapi@npm:2.2.5"
@@ -651,6 +663,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ts-rest/open-api@npm:^3.45.0":
+  version: 3.45.0
+  resolution: "@ts-rest/open-api@npm:3.45.0"
+  dependencies:
+    "@anatine/zod-openapi": "npm:^1.12.0"
+    openapi3-ts: "npm:^2.0.2"
+  peerDependencies:
+    zod: ^3.22.3
+  checksum: 10c0/9d79e59d8478c478ace49b3723b92c15744b33eeddbebf596158d393defd2fcb35a1e3fc5fd24e5711d2629b89c75b43099a4f63cf9581139d5dd13447e8d7c6
+  languageName: node
+  linkType: hard
+
 "@types/body-parser@npm:*, @types/body-parser@npm:^1":
   version: 1.19.5
   resolution: "@types/body-parser@npm:1.19.5"
@@ -698,7 +722,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:^4.17.21":
+"@types/express@npm:*, @types/express@npm:^4.17.21":
   version: 4.17.21
   resolution: "@types/express@npm:4.17.21"
   dependencies:
@@ -791,6 +815,16 @@ __metadata:
     "@types/node": "npm:*"
     "@types/send": "npm:*"
   checksum: 10c0/26ec864d3a626ea627f8b09c122b623499d2221bbf2f470127f4c9ebfe92bd8a6bb5157001372d4c4bd0dd37a1691620217d9dc4df5aa8f779f3fd996b1c60ae
+  languageName: node
+  linkType: hard
+
+"@types/swagger-ui-express@npm:^4.1.6":
+  version: 4.1.6
+  resolution: "@types/swagger-ui-express@npm:4.1.6"
+  dependencies:
+    "@types/express": "npm:*"
+    "@types/serve-static": "npm:*"
+  checksum: 10c0/b7d10d04e70a4e35b0b98bed9ecebb51c0c9bddcb56f7132022b6022c58d643b05a7fe97e792cd6dc8d2c5d952ef173922db56137642a74b464d704fc3c8962b
   languageName: node
   linkType: hard
 
@@ -1986,6 +2020,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"openapi3-ts@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "openapi3-ts@npm:2.0.2"
+  dependencies:
+    yaml: "npm:^1.10.2"
+  checksum: 10c0/2886a85a28d513ef177d069a85293f47e1bb8ba1c9c953f15de064a119f759d6b42b7eb89ed8db0c7d277904fecb65f28a2f4300ebe424f825682b689d2dc810
+  languageName: node
+  linkType: hard
+
 "openapi3-ts@npm:^4.3.1":
   version: 4.3.1
   resolution: "openapi3-ts@npm:4.3.1"
@@ -2427,6 +2470,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"swagger-ui-dist@npm:>=5.0.0":
+  version: 5.17.2
+  resolution: "swagger-ui-dist@npm:5.17.2"
+  checksum: 10c0/add1a6a8b6821a030dd645b2aeae602bcd3b732c9f5952eae3d1388dc6669f1f3118d907ea025b3e907147d6ed647bb8ad441af2344acb65eba29bb48429cc83
+  languageName: node
+  linkType: hard
+
+"swagger-ui-express@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "swagger-ui-express@npm:5.0.0"
+  dependencies:
+    swagger-ui-dist: "npm:>=5.0.0"
+  peerDependencies:
+    express: ">=4.0.0 || >=5.0.0-beta"
+  checksum: 10c0/9f4c1f249cc613d687a80a1d5c60e8acf69145aa7dd573138b19902a7556396b9b2e7262eab69764d7d0ef14ae6f50214e701bd01a18fcf3b7776589d78b1c0b
+  languageName: node
+  linkType: hard
+
 "tar@npm:^6.1.11, tar@npm:^6.1.2":
   version: 6.2.1
   resolution: "tar@npm:6.2.1"
@@ -2462,11 +2523,13 @@ __metadata:
     "@anatine/zod-openapi": "npm:^2.2.5"
     "@ts-rest/core": "npm:^3.45.0"
     "@ts-rest/express": "npm:^3.45.0"
+    "@ts-rest/open-api": "npm:^3.45.0"
     "@types/body-parser": "npm:^1"
     "@types/cors": "npm:^2"
     "@types/express": "npm:^4.17.21"
     "@types/react": "npm:^18.3.0"
     "@types/react-dom": "npm:^18.3.0"
+    "@types/swagger-ui-express": "npm:^4.1.6"
     "@vitejs/plugin-react-swc": "npm:^3.6.0"
     body-parser: "npm:^1.20.2"
     cors: "npm:^2.8.5"
@@ -2474,6 +2537,7 @@ __metadata:
     openapi3-ts: "npm:^4.3.1"
     react: "npm:^18.3.0"
     react-dom: "npm:^18.3.0"
+    swagger-ui-express: "npm:^5.0.0"
     tsx: "npm:^4.7.3"
     typescript: "npm:^5.4.5"
     vite: "npm:^5.2.10"
@@ -2671,6 +2735,13 @@ __metadata:
   version: 4.0.0
   resolution: "yallist@npm:4.0.0"
   checksum: 10c0/2286b5e8dbfe22204ab66e2ef5cc9bbb1e55dfc873bbe0d568aa943eb255d131890dfd5bf243637273d31119b870f49c18fcde2c6ffbb7a7a092b870dc90625a
+  languageName: node
+  linkType: hard
+
+"yaml@npm:^1.10.2":
+  version: 1.10.2
+  resolution: "yaml@npm:1.10.2"
+  checksum: 10c0/5c28b9eb7adc46544f28d9a8d20c5b3cb1215a886609a2fd41f51628d8aaa5878ccd628b755dbcd29f6bb4921bd04ffbc6dcc370689bb96e594e2f9813d2605f
   languageName: node
   linkType: hard
 

@@ -4,6 +4,9 @@ import {isMain} from "./isMain";
 import {createExpressEndpoints, initServer} from '@ts-rest/express';
 import bodyParser from "body-parser";
 import {contract} from "../shared/contract";
+import {generateOpenApi} from "@ts-rest/open-api";
+import packageJson from "../package.json";
+import swaggerUi from 'swagger-ui-express';
 
 export const app = express();
 
@@ -27,6 +30,19 @@ const router = initServer().router(contract, {
 });
 
 createExpressEndpoints(contract, router, app);
+
+const openAPIDocument = generateOpenApi(contract, {
+  info: {
+    title: packageJson.name,
+    version: '1.0.0',
+  },
+});
+
+app.get("/openapi.json", (_, res) => {
+  res.status(200).json(openAPIDocument);
+})
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(openAPIDocument));
 
 app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
   if (err instanceof Error) {
