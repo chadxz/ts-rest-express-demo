@@ -1,28 +1,43 @@
-import * as url from 'node:url';
-import express from 'express';
-import {z} from 'zod';
+import express, {type NextFunction, type Request, type Response} from 'express';
 import cors from "cors";
+import {isMain} from "./isMain";
+import {createExpressEndpoints, initServer} from '@ts-rest/express';
+import bodyParser from "body-parser";
+import {contract} from "../shared/contract";
 
 export const app = express();
 
 app.use(cors());
-app.get('/', (_, res) => {
-  res.send('Hello World!');
+app.use(bodyParser.json());
+
+const router = initServer().router(contract, {
+  getUser: async () => {
+    return {
+      status: 200,
+      body: {
+        id: 1,
+        name: 'Bilbo Baggins',
+        email: 'bilbo@shire.lotr'
+      }
+    };
+  },
+  createUser: async () => {
+    throw new Error('something bad happened');
+  },
 });
 
-/**
- * Is this script file the main module or imported?
- */
-function isMain(): boolean {
-  if (!import.meta.url.startsWith('file:')) {
-    return false;
+createExpressEndpoints(contract, router, app);
+
+app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
+  if (err instanceof Error) {
+    res.status(500).send({ message: err.message});
+    return;
   }
 
-  const modulePath = url.fileURLToPath(import.meta.url);
-  return process.argv[1] === modulePath;
-}
+  res.status(500).send({ message: 'Internal Server Error' });
+})
 
-if (isMain()) {
+if (isMain(import.meta.url)) {
   console.log('Server listening at http://localhost:3000');
   app.listen(3000);
 }

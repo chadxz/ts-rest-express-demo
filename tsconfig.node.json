@@ -16,7 +16,8 @@
     "module": "ESNext",
     "paths": {
       "#backend/*": ["backend/*"],
-      "#frontend/*": ["frontend/*"]
+      "#frontend/*": ["frontend/*"],
+      "#shared/*": ["./shared/*"]
     },
   },
   "include": ["vite.config.ts", "backend"]

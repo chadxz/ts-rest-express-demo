@@ -5,6 +5,18 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@anatine/zod-openapi@npm:^2.2.5":
+  version: 2.2.5
+  resolution: "@anatine/zod-openapi@npm:2.2.5"
+  dependencies:
+    ts-deepmerge: "npm:^6.0.3"
+  peerDependencies:
+    openapi3-ts: ^4.1.2
+    zod: ^3.20.0
+  checksum: 10c0/7f86a56c3927a45a9c87b3f05c5e008267e491dde7a1243544c8b1af750df21933af49844b2087415dffc225f9c09eeba01b61a13f7a22a51b87856a80ce9ea7
+  languageName: node
+  linkType: hard
+
 "@esbuild/aix-ppc64@npm:0.19.12":
   version: 0.19.12
   resolution: "@esbuild/aix-ppc64@npm:0.19.12"
@@ -614,7 +626,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/body-parser@npm:*":
+"@ts-rest/core@npm:^3.45.0":
+  version: 3.45.0
+  resolution: "@ts-rest/core@npm:3.45.0"
+  peerDependencies:
+    zod: ^3.22.3
+  peerDependenciesMeta:
+    zod:
+      optional: true
+  checksum: 10c0/fff6fb6e0439c2bcee432e47adf94c5224791ce8ad1828736a253e86809e67b750e53504e46603c2ef10cb6d7035f4202f202f960c924659c8d680c57c099ce7
+  languageName: node
+  linkType: hard
+
+"@ts-rest/express@npm:^3.45.0":
+  version: 3.45.0
+  resolution: "@ts-rest/express@npm:3.45.0"
+  peerDependencies:
+    express: ^4.0.0
+    zod: ^3.22.3
+  peerDependenciesMeta:
+    zod:
+      optional: true
+  checksum: 10c0/3aa74452ad40e0ac1757cd58733de0b882b00d2dbab104f2a8969393ee1450067b5a9fdacedb4957d014bac130972cb5bbb7efc8fbf54e5a2d955eee6aa538f2
+  languageName: node
+  linkType: hard
+
+"@types/body-parser@npm:*, @types/body-parser@npm:^1":
   version: 1.19.5
   resolution: "@types/body-parser@npm:1.19.5"
   dependencies:
@@ -848,7 +885,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"body-parser@npm:1.20.2":
+"body-parser@npm:1.20.2, body-parser@npm:^1.20.2":
   version: 1.20.2
   resolution: "body-parser@npm:1.20.2"
   dependencies:
@@ -1949,6 +1986,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"openapi3-ts@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "openapi3-ts@npm:4.3.1"
+  dependencies:
+    yaml: "npm:^2.4.1"
+  checksum: 10c0/6d6860ad357eb694db044f09cfc68204b8df46ad8a8b33d584d110ee2a7acd9c92f102a25851cf528f5636352daddf1f82cb7b2fae4ad4c6641e0df02c566b45
+  languageName: node
+  linkType: hard
+
 "p-map@npm:^4.0.0":
   version: 4.0.0
   resolution: "p-map@npm:4.0.0"
@@ -2402,23 +2448,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"trpc-demo@workspace:.":
+"ts-deepmerge@npm:^6.0.3":
+  version: 6.2.1
+  resolution: "ts-deepmerge@npm:6.2.1"
+  checksum: 10c0/b73bc0a0530b26b3969f994483abbb33a8514a9b345e7095cf2add5242cd1fe388c1007c4989e2d8b193fe608f9d7a443025a635fd4331bd0ceb76c73f748adf
+  languageName: node
+  linkType: hard
+
+"ts-rest-express-demo@workspace:.":
   version: 0.0.0-use.local
-  resolution: "trpc-demo@workspace:."
+  resolution: "ts-rest-express-demo@workspace:."
   dependencies:
+    "@anatine/zod-openapi": "npm:^2.2.5"
+    "@ts-rest/core": "npm:^3.45.0"
+    "@ts-rest/express": "npm:^3.45.0"
+    "@types/body-parser": "npm:^1"
     "@types/cors": "npm:^2"
     "@types/express": "npm:^4.17.21"
     "@types/react": "npm:^18.3.0"
     "@types/react-dom": "npm:^18.3.0"
     "@vitejs/plugin-react-swc": "npm:^3.6.0"
+    body-parser: "npm:^1.20.2"
     cors: "npm:^2.8.5"
     express: "npm:^4.19.2"
+    openapi3-ts: "npm:^4.3.1"
     react: "npm:^18.3.0"
     react-dom: "npm:^18.3.0"
     tsx: "npm:^4.7.3"
     typescript: "npm:^5.4.5"
     vite: "npm:^5.2.10"
     zod: "npm:^3.23.4"
+    zustand: "npm:^4.5.2"
   languageName: unknown
   linkType: soft
 
@@ -2497,6 +2557,15 @@ __metadata:
   version: 1.0.0
   resolution: "unpipe@npm:1.0.0"
   checksum: 10c0/193400255bd48968e5c5383730344fbb4fa114cdedfab26e329e50dd2d81b134244bb8a72c6ac1b10ab0281a58b363d06405632c9d49ca9dfd5e90cbd7d0f32c
+  languageName: node
+  linkType: hard
+
+"use-sync-external-store@npm:1.2.0":
+  version: 1.2.0
+  resolution: "use-sync-external-store@npm:1.2.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 10c0/ac4814e5592524f242921157e791b022efe36e451fe0d4fd4d204322d5433a4fc300d63b0ade5185f8e0735ded044c70bcf6d2352db0f74d097a238cebd2da02
   languageName: node
   linkType: hard
 
@@ -2605,9 +2674,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"yaml@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "yaml@npm:2.4.1"
+  bin:
+    yaml: bin.mjs
+  checksum: 10c0/816057dbaea16a7dfb0b868ace930f143dece96bbb4c4fbb6f38aa389166f897240d9fa535dbfd6b1b0d9442416f4abcc698e63f82394d0c67b329aa6c2be576
+  languageName: node
+  linkType: hard
+
 "zod@npm:^3.23.4":
   version: 3.23.4
   resolution: "zod@npm:3.23.4"
   checksum: 10c0/7fb99f05bd5b86dcde06e202285a5d102b2e26d46f5119403a17618d0048e488e074cdcdf3fbba2bdcb77ff8141ddd85112b6d86d7a2fbefc9ffc983997b970e
+  languageName: node
+  linkType: hard
+
+"zustand@npm:^4.5.2":
+  version: 4.5.2
+  resolution: "zustand@npm:4.5.2"
+  dependencies:
+    use-sync-external-store: "npm:1.2.0"
+  peerDependencies:
+    "@types/react": ">=16.8"
+    immer: ">=9.0.6"
+    react: ">=16.8"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    immer:
+      optional: true
+    react:
+      optional: true
+  checksum: 10c0/aee26f11facebb39b016e89539f72a72c2c00151208907fc909c3cedd455728240e09e01d98ebd3b63a2a3518a5917eac5de6c853743ca55a1655296d750bb48
   languageName: node
   linkType: hard

@@ -17,7 +17,8 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "#backend/*": ["./backend/*"],
-      "#frontend/*": ["./frontend/*"]
+      "#frontend/*": ["./frontend/*"],
+      "#shared/*": ["./shared/*"]
     },
     "types": ["vite/client"]
   },

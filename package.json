@@ -1,5 +1,5 @@
 {
-  "name": "trpc-demo",
+  "name": "ts-rest-express-demo",
   "type": "module",
   "packageManager": "yarn@4.1.1",
   "scripts": {
@@ -7,13 +7,20 @@
     "frontend": "vite"
   },
   "dependencies": {
+    "@anatine/zod-openapi": "^2.2.5",
+    "@ts-rest/core": "^3.45.0",
+    "@ts-rest/express": "^3.45.0",
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "openapi3-ts": "^4.3.1",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
-    "zod": "^3.23.4"
+    "zod": "^3.23.4",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@types/body-parser": "^1",
     "@types/cors": "^2",
     "@types/express": "^4.17.21",
     "@types/react": "^18.3.0",
@@ -25,6 +32,7 @@
   },
   "imports": {
     "#backend/*": "./backend/*",
-    "#frontend/*": "./frontend/*"
+    "#frontend/*": "./frontend/*",
+    "#shared/*": "./shared/*"
   }
 }
