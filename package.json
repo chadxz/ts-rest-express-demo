@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@anatine/zod-openapi": "^2.2.5",
+    "@stoplight/elements": "^8.1.2",
     "@ts-rest/core": "^3.45.0",
     "@ts-rest/express": "^3.45.0",
     "@ts-rest/open-api": "^3.45.0",
